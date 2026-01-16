@@ -44,6 +44,7 @@ class SiteHeader extends HTMLElement {
 
     const burger = this.querySelector('.burger');
     const mobileMenu = this.querySelector('.mobile-menu');
+    const btnIcon = this.querySelector('.btn-icon');
 
     burger.addEventListener('click', () => {
       burger.classList.toggle('active');
@@ -56,6 +57,16 @@ class SiteHeader extends HTMLElement {
         mobileMenu.classList.remove('active');
       });
     });
+
+    const pulseArrow = () => {
+      btnIcon.classList.add('pulse');
+      setTimeout(() => btnIcon.classList.remove('pulse'), 1000);
+    };
+
+    setTimeout(() => {
+      pulseArrow();
+      setInterval(pulseArrow, 6000);
+    }, 3000);
   }
 }
 

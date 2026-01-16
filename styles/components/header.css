@@ -142,7 +142,8 @@ site-header .btn-telegram .btn-icon svg {
   transition: transform 0.3s;
 }
 
-site-header .btn-telegram:hover .btn-icon svg {
+site-header .btn-telegram:hover .btn-icon svg,
+site-header .btn-icon.pulse svg {
   animation: arrow 1s linear infinite;
 }
 
