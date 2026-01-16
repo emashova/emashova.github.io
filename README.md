@@ -1,10 +1,10 @@
 # Website 
-Сайт визитка AI креатора Arina Emashova. Пот
+Сайт визитка AI креатора Arina Emashova
 
 
 ## Tech
 - Github Pages hosting (push to main = deploy)
-
+- For local development `cd /Users/konstantin/Desktop/Projects/Experiments/emashova-site && python3 -m http.server 3000`
 
 ## Links
 - [Website](https://emashova.cv)

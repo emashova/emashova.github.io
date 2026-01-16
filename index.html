@@ -15,12 +15,43 @@
   <meta property="og:url" content="https://emashova.cv">
 
   <link rel="stylesheet" href="/styles/tokens.css">
+  <link rel="stylesheet" href="/styles/typography.css">
+  <link rel="stylesheet" href="/styles/layout.css">
 </head>
 <body>
-  <h1>Заголовок H1 — Inter Tight 600</h1>
-  <h2>Заголовок H2 — Inter Tight 600</h2>
-  <h3>Заголовок H3 — Inter Tight 600</h3>
-  <p>Это наборный текст в параграфе — Helvetica Neue. Проверяем как выглядит обычный текст на странице, достаточно ли он читаемый и приятный глазу.</p>
-  <p style="font-family: var(--font-accent);">DotGothic16 — акцентный шрифт ドットゴシック</p>
+  <header>
+    <nav>
+      <a href="/" class="logo">Emashova</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>AI Creator</h1>
+      <p>Создаю визуальный контент с помощью искусственного интеллекта</p>
+    </section>
+
+    <section id="work">
+      <h2>Work</h2>
+    </section>
+
+    <section id="about" class="container">
+      <h2>About</h2>
+      <p>Текстовый блок с ограниченной шириной для комфортного чтения. Здесь будет информация о создателе.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Arina Emashova</p>
+  </footer>
 </body>
 </html>
