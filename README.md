@@ -3,7 +3,7 @@
 
 
 ## Tech
-- Github Pages hosting (push to main = deploy)
+- Github Pages hosting (push to main -> Github Actions to deploy)
 - For local development `cd /Users/konstantin/Desktop/Projects/Experiments/emashova-site && python3 -m http.server 3000`
 
 ## Links
@@ -13,6 +13,7 @@
 
 
 ## Tasks 
+- [x] настроить /ci/cd
 - [ ] Создать рускоязычные версии /ru с верными canonical, чтобы Google и Bing боты понимали, что это одна и таже страница
 - [ ] Заполнить llms.txt
 - [ ] Актуализировать sitemap
