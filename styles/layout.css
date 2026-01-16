@@ -11,7 +11,7 @@ html {
 body {
   min-height: 100dvh;
   background: var(--color-midnight);
-  color: #fff;
+  color: var(--color-snow);
   display: flex;
   flex-direction: column;
 }

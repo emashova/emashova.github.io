@@ -3,9 +3,10 @@
   --font-body: 'Helvetica Neue', Helvetica, Arial, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-accent: 'DotGothic16', 'MS Gothic', monospace;
 
-  --color-midnight: #180b3b;
+  --color-midnight: #13021e;
   --color-violet: #9b59e2;
   --color-mauve: #6a6272;
+  --color-snow: #fffdff;
 
   --space-xs: 4px;
   --space-sm: 8px;

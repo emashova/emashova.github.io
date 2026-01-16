@@ -14,9 +14,16 @@ site-header nav {
 }
 
 site-header .logo {
+  display: none;
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 1.125rem;
+}
+
+site-header .nav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
 }
 
 site-header .nav-links {
@@ -24,27 +31,154 @@ site-header .nav-links {
   gap: var(--space-xl);
 }
 
-site-header .button {
-  padding: var(--space-sm) var(--space-lg);
-  background: var(--color-violet);
-  border-radius: var(--radius-md);
-  font-weight: 600;
+site-header .nav-links a {
+  font-size: 1.125rem;
+  opacity: 0.7;
   transition: opacity 0.2s;
 }
 
-site-header .button:hover {
-  opacity: 0.85;
+site-header .nav-links a:hover {
+  opacity: 1;
 }
 
-@media (min-width: 768px) {
+site-header .burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+site-header .burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--color-snow);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+site-header .burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+site-header .burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+site-header .burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+site-header .mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--color-midnight);
+  padding: var(--space-lg);
+  flex-direction: column;
+  gap: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+site-header .mobile-menu.active {
+  display: flex;
+}
+
+site-header .mobile-menu a {
+  font-size: 1.25rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  padding: var(--space-sm) 0;
+}
+
+site-header .mobile-menu a:hover {
+  opacity: 1;
+}
+
+site-header .btn-telegram {
+  display: flex;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+site-header .btn-telegram .btn-text {
+  padding: 0 var(--space-md);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-snow);
+  font-size: 1.125rem;
+  white-space: nowrap;
+}
+
+
+site-header .btn-telegram .btn-icon {
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid var(--color-midnight);
+}
+
+site-header .btn-telegram .btn-icon svg {
+  transition: transform 0.3s;
+}
+
+site-header .btn-telegram:hover .btn-icon svg {
+  animation: arrow 1s linear infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    margin-left: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 890px) {
   site-header {
     padding: var(--space-xl) var(--space-2xl);
+  }
+
+  site-header .logo {
+    display: block;
+  }
+
+  site-header .burger {
+    display: none;
   }
 
   site-header .nav-links {
     display: flex;
   }
-}
+
+  site-header .mobile-menu {
+    display: none !important;
+  }
+
+  }
 
 @media (min-width: 1200px) {
   site-header {
