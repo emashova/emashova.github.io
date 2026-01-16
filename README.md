@@ -9,6 +9,7 @@
 ## Links
 - [Website](https://emashova.cv)
 - [Email](emashovaarina@gmail.com)
+- [Telegram](https://t.me/winkisoo)
 
 
 ## Tasks 
