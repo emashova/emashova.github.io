@@ -19,31 +19,82 @@
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/components/header.css">
   <link rel="stylesheet" href="/styles/components/footer.css">
+  <link rel="stylesheet" href="/styles/ui.css">
+  <link rel="stylesheet" href="/styles/sections.css">
 </head>
 <body>
   <site-header></site-header>
 
   <main>
     <section class="hero">
-      <h1>AI Creator</h1>
-      <p>Создаю визуальный контент с помощью искусственного интеллекта</p>
+      <span class="neon-label">AI creative wizard</span>
+      <h1>Создаю яркий и конверсионный контент для вашего бизнеса</h1>
+      <p class="hero-desc">Увеличиваю охваты, снижаю стоимость лида и&nbsp;делаю бренд запоминающимся. Быстро&nbsp;и&nbsp;эффективно.</p>
     </section>
 
-    <section id="cases">
+    <section id="cases" class="cases">
       <h2>Кейсы</h2>
+      <div class="cases-grid">
+        <article class="case-card">
+          <div class="case-video">
+            <video src="" poster="" loop muted playsinline></video>
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">Название проекта</h3>
+            <p class="case-desc">Описание кейса и что было сделано</p>
+            <div class="case-brand">Бренд</div>
+            <div class="case-metrics">
+              <span class="metric">+500K просмотров</span>
+              <span class="metric">+12% конверсия</span>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="about" class="container">
-      <h2>Обо мне</h2>
-      <p>Текстовый блок с ограниченной шириной для комфортного чтения.</p>
+    <section id="about" class="about">
+      <div class="about-content">
+        <div class="about-avatar">
+          <img src="/assets/photo/arina-emashova.jpg" alt="Арина Емашова" width="280" height="280">
+        </div>
+        <div class="about-text">
+          <h2>Обо мне</h2>
+          <p>Привет! Я Арина — AI-креатор. Создаю визуальный контент с помощью нейросетей: от ключевых визуалов до виртуальных инфлюенсеров. Помогаю брендам выделяться и привлекать аудиторию.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="reviews">
+    <section id="reviews" class="reviews">
       <h2>Отзывы</h2>
+      <div class="reviews-grid">
+        <figure class="review-card">
+          <img src="/assets/reviews/review-1.jpg" alt="Отзыв" loading="lazy">
+        </figure>
+        <figure class="review-card">
+          <img src="/assets/reviews/review-2.jpg" alt="Отзыв" loading="lazy">
+        </figure>
+        <figure class="review-card">
+          <img src="/assets/reviews/review-3.jpg" alt="Отзыв" loading="lazy">
+        </figure>
+      </div>
     </section>
 
-    <section id="services">
+    <section id="services" class="services">
       <h2>Услуги</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Создание AI-инфлюенсеров</h3>
+          <p>Разработка виртуальных персонажей для продвижения бренда в социальных сетях</p>
+        </article>
+        <article class="service-card">
+          <h3>Создание Key Visual</h3>
+          <p>Ключевые визуалы для рекламных кампаний, баннеров и социальных сетей</p>
+        </article>
+        <article class="service-card">
+          <h3>Контент для соцсетей</h3>
+          <p>Регулярный визуальный контент для Instagram, TikTok, YouTube и других платформ</p>
+        </article>
+      </div>
     </section>
   </main>
 
