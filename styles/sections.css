@@ -318,7 +318,7 @@
   gap: var(--space-lg);
   padding: var(--space-lg) var(--space-xl);
   font-family: var(--font-heading);
-  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.3;
   cursor: pointer;
@@ -361,7 +361,6 @@
 .faq-answer p {
   opacity: 0.75;
   line-height: 1.7;
-  max-width: 70ch;
 }
 
 @keyframes faq-reveal {
