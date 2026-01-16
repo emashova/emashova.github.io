@@ -9,7 +9,7 @@ class SiteHeader extends HTMLElement {
           <li><a href="#reviews">Отзывы</a></li>
           <li><a href="#services">Услуги</a></li>
         </ul>
-        <a href="https://t.me/emashova" class="button" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://t.me/winkisoo" class="button" target="_blank" rel="noopener">Telegram</a>
       </nav>
     `;
   }

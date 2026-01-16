@@ -6,7 +6,7 @@ class SiteFooter extends HTMLElement {
       <div class="footer-content">
         <div class="footer-main">
           <p class="text-sm text-muted">© ${year} Арина Емашова</p>
-          <a href="mailto:hello@emashova.cv" class="footer-email">hello@emashova.cv</a>
+          <a href="mailto:emashovaarina@gmail.com" class="footer-email">emashovaarina@gmail.com</a>
         </div>
         <div class="footer-legal text-sm text-muted">
           <a href="/privacy">Конфиденциальность</a>
