@@ -265,7 +265,7 @@
 }
 
 .service-card:hover {
-  border-color: var(--color-solid-violet);
+  border-color: var(--color-transparent-white-15);
 }
 
 .service-card h3 {
