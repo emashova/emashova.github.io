@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: var(--color-blush);
+  color: var(--color-midnight);
+}
+
 html {
   scroll-behavior: smooth;
 }
