@@ -28,8 +28,14 @@
   width: calc(100% + var(--space-lg) * 2);
   height: 100%;
   z-index: -1;
-  background-image: 
-    linear-gradient(to bottom, var(--color-solid-midnight) 0%, transparent 30%, transparent 70%, var(--color-solid-midnight) 100%),
+  background-image:
+    linear-gradient(
+      to bottom,
+      var(--color-solid-midnight) 0%,
+      transparent 30%,
+      transparent 70%,
+      var(--color-solid-midnight) 100%
+    ),
     repeating-linear-gradient(
       0deg,
       transparent,
@@ -44,7 +50,10 @@
       var(--color-transparent-black-30) 1px,
       var(--color-transparent-black-30) 2px
     );
-  background-size: 100% 100%, 2px 2px, 2px 2px;
+  background-size:
+    100% 100%,
+    2px 2px,
+    2px 2px;
 }
 
 .hero-content {
@@ -277,6 +286,129 @@
 
 .service-card--light:hover {
   border-color: transparent;
+}
+
+/* Image Stack Component */
+.image-stack {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 9/16;
+  margin: var(--space-lg) auto 0;
+}
+
+.stack-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.stack-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px var(--color-transparent-black-30);
+  transition:
+    transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.4s ease,
+    z-index 0s 0.2s; /* delay z-index change */
+  background: var(--color-solid-mauve); /* fallback */
+}
+
+/* Stacking States */
+.stack-img[data-pos="0"] {
+  z-index: 10;
+  transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+  opacity: 1;
+  transition:
+    transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.4s ease,
+    z-index 0s; /* immediate z-index */
+}
+
+.stack-img[data-pos="1"] {
+  z-index: 5;
+  transform: translateX(12px) translateY(8px) rotate(3deg) scale(0.95);
+  opacity: 0.8;
+}
+
+.stack-img[data-pos="2"] {
+  z-index: 1;
+  transform: translateX(24px) translateY(16px) rotate(6deg) scale(0.9);
+  opacity: 0.6;
+}
+
+/* Hidden images (if any more added later) */
+.stack-img[data-pos="3"],
+.stack-img[data-pos="4"] {
+  z-index: -1;
+  transform: translateX(36px) translateY(24px) rotate(9deg) scale(0.85);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Navigation Arrows */
+.stack-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-solid-snow);
+  border: 1px solid var(--color-transparent-white-10);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+  color: var(--color-solid-midnight);
+}
+
+.stack-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+  background: white;
+}
+
+.stack-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.stack-arrow--prev {
+  left: -20px;
+}
+
+.stack-arrow--next {
+  right: -20px;
+}
+
+.stack-arrow img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.stack-arrow--prev img {
+  transform: rotate(180deg);
+}
+
+/* Mobile adjust */
+@media (max-width: 480px) {
+  .stack-arrow--prev {
+    left: -12px;
+  }
+  .stack-arrow--next {
+    right: -12px;
+  }
 }
 
 .service-card .tiktok-embed {
