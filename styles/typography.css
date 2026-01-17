@@ -9,6 +9,11 @@ p {
   font-size: 1.1875rem;
 }
 
+.link {
+  color: var(--color-solid-orchid);
+  text-decoration: underline;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;
