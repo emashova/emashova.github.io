@@ -8,7 +8,7 @@
   --color-mauve: #6a6272;
   --color-snow: #fffdff;
   --color-neon: #f59aff;
-  --color-blush: #EFC2F1;
+  --color-blush: rgba(239, 194, 241, 0.4);
 
   --space-xs: 4px;
   --space-sm: 8px;
