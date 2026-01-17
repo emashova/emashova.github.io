@@ -260,13 +260,32 @@
 }
 
 .service-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   margin-bottom: var(--space-sm);
 }
 
 .service-card p {
   opacity: 0.7;
   line-height: 1.6;
+}
+
+.service-card--light {
+  background: var(--color-solid-snow);
+  color: var(--color-solid-midnight);
+  border-color: transparent;
+}
+
+.service-card--light:hover {
+  border-color: transparent;
+}
+
+.service-card .tiktok-embed {
+  margin: var(--space-lg) 0 0;
+  max-width: 100%;
+}
+
+.service-card .tiktok-embed iframe {
+  border-radius: var(--radius-lg);
 }
 
 /* Responsive */
@@ -322,6 +341,12 @@
     height: 56px;
   }
 
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1375px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
   }

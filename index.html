@@ -146,9 +146,12 @@
           <h3>Создание Key Visual</h3>
           <p>Ключевые визуалы для рекламных кампаний, баннеров и социальных сетей</p>
         </article>
-        <article class="service-card">
+        <article class="service-card service-card--light">
           <h3>Контент для соцсетей</h3>
           <p>Регулярный визуальный контент для Instagram, TikTok, YouTube и других платформ</p>
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@pallie.run/video/7577137485986286879" data-video-id="7577137485986286879">
+            <section><a target="_blank" href="https://www.tiktok.com/@pallie.run/video/7577137485986286879">@pallie.run</a></section>
+          </blockquote>
         </article>
       </div>
     </section>
@@ -181,5 +184,24 @@
   <site-footer></site-footer>
 
   <script type="module" src="/scripts/common.js"></script>
+  <script>
+    const servicesSection = document.getElementById('services');
+    let tiktokLoaded = false;
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !tiktokLoaded) {
+          tiktokLoaded = true;
+          const script = document.createElement('script');
+          script.src = 'https://www.tiktok.com/embed.js';
+          script.async = true;
+          document.body.appendChild(script);
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '200px' });
+    
+    observer.observe(servicesSection);
+  </script>
 </body>
 </html>
