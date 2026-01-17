@@ -75,66 +75,86 @@
   padding: var(--space-3xl) 0;
 }
 
-.cases-grid {
+.cases-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+.case-item {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-xl);
+  align-items: center;
 }
 
-.case-card {
-  display: grid;
-  gap: var(--space-lg);
-  background: var(--color-transparent-white-05);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+/* On desktop, alternate image position or keep consistent? Plan said info left, image right. */
+@media (min-width: 900px) {
+  .case-item {
+    grid-template-columns: 65fr 35fr;
+    gap: var(--space-3xl);
+  }
 }
 
-.case-video {
-  aspect-ratio: 9/16;
-  max-height: 500px;
-  background: var(--color-solid-mauve);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
 
-.case-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-.case-content {
-  padding: var(--space-lg);
-}
-
-.case-title {
-  font-size: 1.5rem;
-  margin-bottom: var(--space-sm);
-}
-
-.case-desc {
-  opacity: 0.7;
-  margin-bottom: var(--space-md);
-}
-
-.case-brand {
-  font-size: 0.875rem;
-  opacity: 0.5;
-  margin-bottom: var(--space-md);
+.case-info p {
+  opacity: 0.8;
+  font-size: 1.375rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
 }
 
 .case-metrics {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm);
+  gap: var(--space-xl);
 }
 
-.metric {
-  padding: var(--space-xs) var(--space-sm);
-  background: var(--color-solid-violet);
-  border-radius: var(--radius-sm);
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-solid-violet);
+  line-height: 1;
+}
+
+.metric-label {
   font-size: 0.875rem;
-  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+}
+
+.case-visual {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  /* Reset previous styles */
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+}
+
+.case-visual img {
+  width: 100%;
+  height: auto;
+  max-height: 40vh; /* split height between 2 images to roughly sum to 80vh */
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 40px -10px var(--color-transparent-black-30);
+  transition: transform 0.5s ease;
+}
+
+.case-visual:hover img {
+  transform: scale(1.02);
 }
 
 /* About */
@@ -268,10 +288,7 @@
   border-color: var(--color-transparent-white-15);
 }
 
-.service-card h3 {
-  font-size: 1.875rem;
-  margin-bottom: var(--space-sm);
-}
+
 
 .service-card p {
   opacity: 0.7;
@@ -291,6 +308,7 @@
 .service-card--influencer {
   background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url('/assets/images/promo-ai-influencer.png') center/cover no-repeat;
   border-color: transparent; /* Cleaner look for image cards */
+  min-height: 320px;
 }
 
 .service-card--influencer h3,
@@ -448,17 +466,7 @@
     width: calc(100% + var(--space-2xl) * 2);
   }
 
-  .cases-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .case-card {
-    grid-template-columns: 200px 1fr;
-  }
-
-  .case-video {
-    max-height: none;
-  }
+  /* .cases-grid styles removed */
 
   .about-content {
     flex-direction: row;
@@ -501,14 +509,6 @@
     left: calc(-1 * var(--space-3xl));
     right: calc(-1 * var(--space-3xl));
     width: calc(100% + var(--space-3xl) * 2);
-  }
-
-  .cases-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .case-card {
-    grid-template-columns: 1fr;
   }
 }
 
