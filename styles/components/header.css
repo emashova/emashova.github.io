@@ -2,7 +2,7 @@ site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--color-midnight);
+  background: var(--color-solid-midnight);
   padding: var(--space-lg);
 }
 
@@ -58,7 +58,7 @@ site-header .burger span {
   display: block;
   width: 100%;
   height: 2px;
-  background: var(--color-snow);
+  background: var(--color-solid-snow);
   border-radius: 2px;
   transition: transform 0.3s, opacity 0.3s;
 }
@@ -81,11 +81,11 @@ site-header .mobile-menu {
   top: 100%;
   left: 0;
   right: 0;
-  background: var(--color-midnight);
+  background: var(--color-solid-midnight);
   padding: var(--space-lg);
   flex-direction: column;
   gap: var(--space-md);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-transparent-white-10);
 }
 
 site-header .mobile-menu.active {
@@ -106,7 +106,7 @@ site-header .mobile-menu a:hover {
 site-header .btn-telegram {
   display: flex;
   height: fit-content;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-transparent-white-10);
   border-radius: var(--radius-full);
   justify-content: space-between;
   align-items: center;
@@ -121,7 +121,7 @@ site-header .btn-telegram .btn-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-snow);
+  color: var(--color-solid-snow);
   font-size: 1.125rem;
   white-space: nowrap;
 }
@@ -130,12 +130,12 @@ site-header .btn-telegram .btn-text {
 site-header .btn-telegram .btn-icon {
   width: 45px;
   height: 45px;
-  background-color: var(--color-violet);
+  background-color: var(--color-solid-violet);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 3px solid var(--color-midnight);
+  border: 3px solid var(--color-solid-midnight);
 }
 
 site-header .btn-telegram .btn-icon svg {

@@ -5,7 +5,7 @@
 }
 
 ::selection {
-  background: var(--color-blush);
+  background: var(--color-transparent-blush);
 }
 
 html {
@@ -14,8 +14,8 @@ html {
 
 body {
   min-height: 100dvh;
-  background: var(--color-midnight);
-  color: var(--color-snow);
+  background: var(--color-solid-midnight);
+  color: var(--color-solid-snow);
   display: flex;
   flex-direction: column;
 }

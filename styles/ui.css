@@ -4,15 +4,15 @@
   display: inline-block;
   width: fit-content;
   padding: var(--space-xs) var(--space-md);
-  color: var(--color-neon);
+  color: var(--color-solid-neon);
   font-family: var(--font-accent);
   font-size: 0.875rem;
   text-transform: uppercase;
   transition: 0.5s;
   border: 1px solid transparent;
   background: 
-    linear-gradient(var(--color-midnight), var(--color-midnight)) padding-box,
-    conic-gradient(from var(--angle, 0deg), transparent 20%, var(--color-neon) 50%, transparent 80%) border-box;
+    linear-gradient(var(--color-solid-midnight), var(--color-solid-midnight)) padding-box,
+    conic-gradient(from var(--angle, 0deg), transparent 20%, var(--color-solid-neon) 50%, transparent 80%) border-box;
   border-radius: var(--radius-full);
   animation: neon-spin 2s linear infinite;
 }
@@ -22,8 +22,8 @@
 }
 
 .neon-label:hover {
-  box-shadow: 0 0 5px var(--color-neon),
-              0 0 15px var(--color-neon);
+  box-shadow: 0 0 5px var(--color-solid-neon),
+              0 0 15px var(--color-solid-neon);
 }
 
 @property --angle {

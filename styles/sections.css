@@ -29,20 +29,20 @@
   height: 100%;
   z-index: -1;
   background-image: 
-    linear-gradient(to bottom, var(--color-midnight) 0%, transparent 30%, transparent 70%, var(--color-midnight) 100%),
+    linear-gradient(to bottom, var(--color-solid-midnight) 0%, transparent 30%, transparent 70%, var(--color-solid-midnight) 100%),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 1px,
-      rgba(0, 0, 0, 0.3) 1px,
-      rgba(0, 0, 0, 0.3) 2px
+      var(--color-transparent-black-30) 1px,
+      var(--color-transparent-black-30) 2px
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 1px,
-      rgba(0, 0, 0, 0.3) 1px,
-      rgba(0, 0, 0, 0.3) 2px
+      var(--color-transparent-black-30) 1px,
+      var(--color-transparent-black-30) 2px
     );
   background-size: 100% 100%, 2px 2px, 2px 2px;
 }
@@ -75,7 +75,7 @@
 .case-card {
   display: grid;
   gap: var(--space-lg);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-transparent-white-05);
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
@@ -83,7 +83,7 @@
 .case-video {
   aspect-ratio: 9/16;
   max-height: 500px;
-  background: var(--color-mauve);
+  background: var(--color-solid-mauve);
   border-radius: var(--radius-md);
   overflow: hidden;
 }
@@ -122,7 +122,7 @@
 
 .metric {
   padding: var(--space-xs) var(--space-sm);
-  background: var(--color-violet);
+  background: var(--color-solid-violet);
   border-radius: var(--radius-sm);
   font-size: 0.875rem;
   font-weight: 600;
@@ -179,7 +179,7 @@
 .review-card {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-transparent-white-05);
 }
 
 .review-card img {
@@ -201,14 +201,14 @@
 
 .service-card {
   padding: var(--space-xl);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-transparent-white-05);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-transparent-white-10);
   transition: border-color 0.2s;
 }
 
 .service-card:hover {
-  border-color: var(--color-violet);
+  border-color: var(--color-solid-violet);
 }
 
 .service-card h3 {
@@ -295,20 +295,20 @@
 }
 
 .faq-item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-transparent-white-03);
+  border: 1px solid var(--color-transparent-white-08);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: border-color 0.25s, background 0.25s;
 }
 
 .faq-item:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-transparent-white-15);
 }
 
 .faq-item[open] {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--color-violet);
+  background: var(--color-transparent-white-05);
+  border-color: var(--color-solid-violet);
 }
 
 .faq-question {
@@ -340,8 +340,8 @@
   justify-content: center;
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--color-violet);
-  border: 1px solid var(--color-violet);
+  color: var(--color-solid-violet);
+  border: 1px solid var(--color-solid-violet);
   border-radius: var(--radius-full);
   transition: transform 0.3s, background 0.3s;
 }
@@ -349,8 +349,8 @@
 .faq-item[open] .faq-question::after {
   content: '−';
   transform: rotate(180deg);
-  background: var(--color-violet);
-  color: var(--color-snow);
+  background: var(--color-solid-violet);
+  color: var(--color-solid-snow);
 }
 
 .faq-answer {

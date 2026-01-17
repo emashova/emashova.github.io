@@ -1,6 +1,6 @@
 site-footer {
   padding: var(--space-lg);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-transparent-white-10);
 }
 
 site-footer .footer-content {
@@ -16,7 +16,7 @@ site-footer .footer-main {
 }
 
 site-footer .footer-email {
-  color: var(--color-violet);
+  color: var(--color-solid-violet);
 }
 
 site-footer .footer-legal {
