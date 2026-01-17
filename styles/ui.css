@@ -35,3 +35,107 @@
 @keyframes neon-spin {
   to { --angle: 360deg; }
 }
+
+/* FAQ Accordion */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.faq-item {
+  background: var(--color-transparent-white-03);
+  border: 1px solid var(--color-transparent-white-08);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.faq-item:hover {
+  border-color: var(--color-transparent-white-15);
+}
+
+.faq-item[open] {
+  background: var(--color-transparent-white-05);
+  border-color: var(--color-solid-violet);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding: var(--space-lg) var(--space-xl);
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  border: 1px solid var(--color-solid-violet);
+  border-radius: var(--radius-full);
+  transition: background 0.3s;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 2px;
+  background: var(--color-solid-violet);
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-item[open] .faq-icon {
+  background: var(--color-solid-violet);
+}
+
+.faq-item[open] .faq-icon::before,
+.faq-item[open] .faq-icon::after {
+  background: var(--color-solid-snow);
+}
+
+.faq-item[open] .faq-icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.faq-answer {
+  padding: 0 var(--space-xl) var(--space-xl);
+  animation: faq-reveal 0.3s ease-out;
+}
+
+.faq-answer p {
+  opacity: 0.75;
+  line-height: 1.7;
+}
+
+@keyframes faq-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
